@@ -1,5 +1,5 @@
-module github.com/FiruzMurodov/stats
+module github.com/FiruzMurodov/stats/v2
 
 go 1.17
 
-require github.com/FiruzMurodov/bank v0.0.0-20211217044345-09f8ffacd715 // indirect
+require github.com/FiruzMurodov/bank/v2 v2.0.0
