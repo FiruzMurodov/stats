@@ -48,3 +48,32 @@ import (
 		}
 	
 	}
+	
+	func TestPeriodsDynamic(t *testing.T) {
+		first := map[types.Category]types.Money {
+				"auto": 10,
+			    "food":20,
+			
+		}
+
+		second:= map[types.Category]types.Money {
+			"auto": 10,
+			"food": 25,
+			"mobile":5,
+		
+	}
+		
+		excepted := map[types.Category]types.Money {
+			"auto":0,
+			"food":5,
+			"mobile":5,
+			
+		}
+
+		result:= PeriodsDynamic(first,second)
+
+		if !reflect.DeepEqual(excepted,result) {
+			t.Errorf("invalid results matching map excepted %v,actual %v",excepted, result)
+		}
+	
+	}
